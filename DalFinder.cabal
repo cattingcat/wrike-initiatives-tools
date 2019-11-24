@@ -1,0 +1,89 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: fdd90f91648d3aee29ea3560eba41c89852c84de64ea757b5e583913b9d27f73
+
+name:           DalFinder
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/Github username here/DalFinder#readme>
+homepage:       https://github.com/Github username here/DalFinder#readme
+bug-reports:    https://github.com/Github username here/DalFinder/issues
+author:         Author name here
+maintainer:     Author email here
+copyright:      2019 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/Github username here/DalFinder
+
+library
+  exposed-modules:
+      Core
+      FileValidators
+      Lib
+      ParseCurrentUser
+      ProjectValidators
+      PubspecValidators
+      Utils
+  other-modules:
+      Paths_DalFinder
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , bytestring
+    , filepath
+    , mtl
+    , parsec
+    , system-fileio
+    , system-filepath
+    , text
+  default-language: Haskell2010
+
+executable DalFinder-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_DalFinder
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      DalFinder
+    , base >=4.7 && <5
+    , bytestring
+    , filepath
+    , mtl
+    , parsec
+    , system-fileio
+    , system-filepath
+    , text
+  default-language: Haskell2010
+
+test-suite DalFinder-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_DalFinder
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      DalFinder
+    , base >=4.7 && <5
+    , bytestring
+    , filepath
+    , mtl
+    , parsec
+    , system-fileio
+    , system-filepath
+    , text
+  default-language: Haskell2010
