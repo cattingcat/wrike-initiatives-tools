@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: fdd90f91648d3aee29ea3560eba41c89852c84de64ea757b5e583913b9d27f73
+-- hash: 5f77f8304b0c3a9aa5443bb0f75344333c451425c9357c02459119655d895c09
 
 name:           DalFinder
 version:        0.1.0.0
@@ -41,7 +41,6 @@ library
   build-depends:
       base >=4.7 && <5
     , bytestring
-    , filepath
     , mtl
     , parsec
     , system-fileio
@@ -60,7 +59,6 @@ executable DalFinder-exe
       DalFinder
     , base >=4.7 && <5
     , bytestring
-    , filepath
     , mtl
     , parsec
     , system-fileio
@@ -80,7 +78,6 @@ test-suite DalFinder-test
       DalFinder
     , base >=4.7 && <5
     , bytestring
-    , filepath
     , mtl
     , parsec
     , system-fileio
